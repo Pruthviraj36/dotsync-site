@@ -1,0 +1,50 @@
+@import "tailwindcss";
+
+:root {
+  --background: #0B0E14;
+  --foreground: #F4F1EA;
+}
+
+@theme inline {
+  --color-bg: #0B0E14;
+  --color-bg-2: #10141C;
+  --color-panel: #161B24;
+  --color-border: #242B38;
+  --color-text: #F4F1EA;
+  --color-muted: #9AA4B2;
+  --color-muted-2: #6B7280;
+  --color-amber: #F5A623;
+  --color-amber-light: #FFD66B;
+  --color-red: #FF5F57;
+  --color-green: #28C840;
+  --color-green-bg: #10301F;
+  --color-green-text: #7CE3A0;
+  --font-mono: 'JetBrains Mono', 'Fira Code', Consolas, 'SFMono-Regular', monospace;
+  --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.bg-grid {
+  background-image:
+    linear-gradient(rgba(245, 166, 35, 0.035) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(245, 166, 35, 0.035) 1px, transparent 1px);
+  background-size: 48px 48px;
+  -webkit-mask-image: radial-gradient(ellipse 80% 60% at 50% 0%, black 40%, transparent 90%);
+  mask-image: radial-gradient(ellipse 80% 60% at 50% 0%, black 40%, transparent 90%);
+}
+
+@keyframes blink {
+  0%, 49% { opacity: 1; }
+  50%, 100% { opacity: 0; }
+}
+.cursor-blink {
+  animation: blink 1.1s infinite;
+}
