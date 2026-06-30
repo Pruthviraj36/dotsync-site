@@ -5,7 +5,7 @@ import Terminal from "./Terminal";
 
 export default function Hero() {
   const copyInstall = async () => {
-    await navigator.clipboard.writeText("npm install -g dotsync-cli");
+    await navigator.clipboard.writeText("go install github.com/Pruthviraj36/dotsync@latest");
   };
 
   return (
@@ -73,7 +73,7 @@ export default function Hero() {
           className="font-mono text-sm bg-bg-2 border border-border rounded-lg px-[18px] py-3.5 flex items-center justify-between max-w-[420px] text-muted"
         >
           <span>
-            $ <span className="text-amber-light">npm install -g dotsync-cli</span>
+            $ <span className="text-amber-light">go install github.com/Pruthviraj36/dotsync@latest</span>
           </span>
           <button
             onClick={copyInstall}
